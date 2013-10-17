@@ -4,7 +4,7 @@
 #include <type_traits>
 
 template <typename T2, typename T1>
-inline T2 lexical_eval(const T1& in) {
+inline const T2 lexical_eval(const T1& in) {
   T2 out;
   std::stringstream ss;
   ss << in;
@@ -13,7 +13,7 @@ inline T2 lexical_eval(const T1& in) {
 }
 
 template <typename T2>
-inline T2 lexical_eval(const std::string& in) {
+inline const T2 lexical_eval(const std::string& in) {
   T2 out;
   std::stringstream ss;
   if(std::is_integral<T2>::value) {
@@ -38,6 +38,6 @@ inline T2 lexical_eval(const std::string& in) {
 }
 
 template <typename T2>
-inline T2 lexical_eval(const char* in) {
+inline const T2 lexical_eval(const char* in) {
   return lexical_eval<T2>(std::string(in));
 }
