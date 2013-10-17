@@ -37,6 +37,11 @@ inline const T2 lexical_eval(const std::string& in) {
   return out;
 }
 
+template <>
+inline char lexical_eval(const std::string& in) {
+  return static_cast<char>(lexical_eval<int>(in));
+}
+
 template <typename T2>
 inline const T2 lexical_eval(const char* in) {
   return lexical_eval<T2>(std::string(in));
