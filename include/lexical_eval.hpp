@@ -38,8 +38,13 @@ inline const T2 lexical_eval(const std::string& in) {
 }
 
 template <>
-inline char lexical_eval(const std::string& in) {
+inline const char lexical_eval(const std::string& in) {
   return static_cast<char>(lexical_eval<int>(in));
+}
+
+template <>
+inline const unsigned char lexical_eval(const std::string& in) {
+  return static_cast<unsigned char>(lexical_eval<unsigned int>(in));
 }
 
 template <typename T2>
