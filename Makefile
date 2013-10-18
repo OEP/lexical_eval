@@ -1,4 +1,4 @@
-CXXFLAGS = -std=c++11 -Iinclude/ -Wall -Wextra
+CXXFLAGS = -g -std=c++11 -Iinclude/ -Wall -Wextra
 TEST_DIR = tests
 TEST_CPPS = $(wildcard $(TEST_DIR)/*.cpp)
 TEST_BINS = $(TEST_CPPS:.cpp=)
