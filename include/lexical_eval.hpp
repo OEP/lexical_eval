@@ -61,6 +61,16 @@ inline T2 lexical_eval(const std::string& in) {
 }
 
 template <>
+inline bool lexical_eval(const std::string& in) {
+  const std::string tok = lexical_eval<std::string>(in);
+  if(tok == "true") return true;
+  else if(tok == "false") return false;
+  const int i = lexical_eval<int>(in);
+  const float f = lexical_eval<float>(in);
+  return i != 0 || f != 0.0f;
+}
+
+template <>
 inline char lexical_eval(const std::string& in) {
   return static_cast<char>(lexical_eval<int>(in));
 }
