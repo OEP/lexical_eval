@@ -44,7 +44,7 @@ inline char lexical_eval(const std::string& in) {
 
 template <>
 inline unsigned char lexical_eval(const std::string& in) {
-  return static_cast<char>(lexical_eval<int>(in));
+  return static_cast<unsigned char>(lexical_eval<int>(in));
 }
 
 template <typename T2>
