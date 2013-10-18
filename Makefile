@@ -9,4 +9,4 @@ clean:
 	rm -rf $(TEST_BINS)
 
 runtests: $(TEST_BINS)
-	for x in $(TEST_BINS); do $$x; done
+	@for x in $(TEST_BINS); do echo running $$x; $$x; done
