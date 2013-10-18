@@ -43,10 +43,11 @@ inline void do_close_test(const T1& input, const T2& expected, const T3& delta) 
 template <typename T1, typename T2>
 inline void do_integral_batch(const T1& input, const T2& expected) {
   do_equal_test<unsigned long>(input, expected);
+  do_equal_test<unsigned long long>(input, expected);
   do_equal_test<unsigned int>(input, expected);
   do_equal_test<unsigned short>(input, expected);
   do_equal_test<unsigned char>(input, expected);
-  do_equal_test<long>(input, expected);
+  do_equal_test<long long>(input, expected);
   do_equal_test<int>(input, expected);
   do_equal_test<short>(input, expected);
   do_equal_test<char>(input, expected);
