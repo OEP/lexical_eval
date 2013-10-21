@@ -6,10 +6,6 @@ scientific notation, octal, and hexadecimal. The main focus of lexical_eval
 is correctly casting std::string objects into C++ fundamental types (like
 bool, int, char) according to rules normally honored by the C++ scanner.
 
-Conversion from types other than string are less useful, but will follow the
-normal stream semantics (the unspecialized behavior of lexical_eval is just
-a standard std::stringstream conversion).
-
 Some examples:
 
 * `lexical_eval<int>("3")` = 3

@@ -26,15 +26,6 @@
 #include <sstream>
 #include <type_traits>
 
-template <typename T2, typename T1>
-inline T2 lexical_eval(const T1& in) {
-  T2 out;
-  std::stringstream ss;
-  ss << in;
-  ss >> out;
-  return out;
-}
-
 template <typename T2>
 inline T2 lexical_eval(const std::string& in) {
   T2 out;
