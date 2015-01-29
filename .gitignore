@@ -1,1 +1,4 @@
 *.swp
+*.o
+lexical_eval_test
+lib/*
