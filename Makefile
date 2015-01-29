@@ -1,4 +1,5 @@
-CXXFLAGS = -g -std=c++0x -Iinclude/ -Llib/ -Wall -Wextra
+CXXFLAGS = -g -std=c++0x -Iinclude/ -Wall -Wextra
+LDFLAGS = -Llib/
 LDLIBS = -lgtest_main -lgtest -pthread
 
 GTEST_HOME = /usr/src/gtest
@@ -17,6 +18,7 @@ test: $(TEST_BIN)
 	./$(TEST_BIN)
 
 $(TEST_BIN): $(TEST_OBJS)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 gtest:
 	mkdir -p lib
