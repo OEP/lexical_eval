@@ -20,7 +20,7 @@ debug:
 test: $(TEST_BIN)
 	./$(TEST_BIN)
 
-$(TEST_OBJS): $(BUILD)/gtest
+$(TEST_OBJS): $(BUILD)/gtest include/lexical_eval.hpp
 
 $(TEST_BIN): $(TEST_OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $^ $(LDLIBS)
