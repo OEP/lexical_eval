@@ -1,0 +1,9 @@
+language: cpp
+compiler:
+  - clang
+  - gcc
+script: make test
+install:
+  - wget https://googletest.googlecode.com/files/gtest-1.7.0.zip
+  - unzip gtest-1.7.0.zip
+  - ln -s gtest-1.7.0 gtest
