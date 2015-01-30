@@ -1,6 +1,8 @@
 lexical_eval
 ============
 
+[![Build Status](https://travis-ci.org/OEP/lexical_eval.svg?branch=develop)](https://travis-ci.org/OEP/lexical_eval)
+
 Handy C++11 function similar to `lexical_cast` with some added support for
 scientific notation, octal, and hexadecimal. The main focus of lexical_eval
 is correctly casting std::string objects into C++ fundamental types (like
